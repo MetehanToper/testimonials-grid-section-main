@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --Moderate-violet: hsl(263, 55%, 52%);
+      --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+      --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+      --White: hsl(0, 0%, 100%);
+
+      --Light-gray: hsl(0, 0%, 81%);
+      --Light-grayish-blue: hsl(210, 46%, 95%);
+
+      --font-fam:'Barlow Semi Condensed', sans-serif;
+    }
+
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-fam);
+      font-size: 13px;
+      background-color:var(--Light-gray) ;
+
+    }
+    section{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 1rem;
+      padding: 50px 150px;
+    }
+    
+    .daniel{
+      background-color: var(--Moderate-violet);
+      grid-column:1/span 2;
+      color: white;
+    }
+    .jenette{
+      background-color: var(--White);
+      grid-row: 2;
+      border: 1px solid white;
+      color: var(--Very-dark-blackish-blue);
+    }
+    .patrick{
+      background-color: var(--Very-dark-blackish-blue);
+      grid-column: 2/span 2;
+      color: white;
+    }
+    .kira{
+      background-color: var(--White);
+      grid-column: 4;
+      grid-row: 1/span 2;
+      border: 1px solid white;
+
+    }
+    .jonathan{
+      background-color: var(--Very-dark-grayish-blue);
+      color: white;
+    }
+    .box{
+      border-radius: 10px;
+      height: 300px;
+      padding: 15px;
+    }
+    .img{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border:1px solid white;
+    }
+    .name{
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .verified{
+      font-size:.9rem;
+      opacity: .5;
+      font-weight: 500;
+    }
+    .header{
+     
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .text{
+      font-size: .9rem;
+      opacity: .5;
+      line-height:1.3rem;
+    }
+    /* Daniel */
+    .daniel img{
+      position: relative;
+      top: 10px;
+      left: 20px;
+    }
+    .daniel .name{
+      position: relative;
+      top: -50px;
+      left: 80px;
+    }
+    .daniel .verified{
+      position: relative;
+      top: -60px;
+      left:80px;
+    }
+    .daniel .header{
+      position: relative;
+      top: -60px;
+      left: 20px;
+      width: 460px;
+    }
+    .daniel .text{
+      position: relative;
+      top: -55px;
+      left: 20px;
+      width: 460px;
+    }
+    /* Jonathan */
+    .jonathan img{
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+    .jonathan .name{
+      position: relative;
+      top: -50px;
+      left: 70px;
+    }
+    .jonathan .verified{
+      position: relative;
+      top: -60px;
+      left: 70px;
+    }
+    .jonathan .header{
+      position: relative;
+      top: -60px;
+      left: 10px;
+    }
+    .jonathan .text{
+      position: relative;
+      top: -55px;
+      left: 10px;
+      width: 200px;
+    }
+    /* Jeanette */
+    .jenette img{
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+    .jenette .name{
+      position: relative;
+      top: -50px;
+      left: 70px;
+    }
+    .jenette .verified{
+      position: relative;
+      top: -60px;
+      left: 70px;
+    }
+    .jenette .header{
+      position: relative;
+      top: -60px;
+      left: 10px; 
+      width: 180px;
+    }
+    .jenette .text{
+      position: relative;
+      top: -55px;
+      left: 10px;
+    }
+    /* Patrick */
+    .patrick img{
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+    .patrick .name{
+      position: relative;
+      top: -50px;
+      left: 70px;
+    }
+    .patrick .verified{
+      position: relative;
+      top: -60px; 
+      left: 70px;
+    }
+    .patrick .header{
+      position: relative;
+      top: -60px;
+      left: 10px;
+    }
+    .patrick .text{
+      position: relative;
+      top: -55px;
+      left: 10px;
+      width: 460px;
+    }
+    /* Kira */
+    .kira {
+      height: 647px;
+    }
+    
+    .kira img{
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+    .kira .name{
+      position: relative;
+      top: -50px;
+      left: 70px;
+    }
+    .kira .verified{
+      position: relative;
+      top: -60px;
+      left: 70px;
+    }
+    .kira .header{
+      position: relative;
+      top: -60px;
+      left:10px;
+      color: var(--Very-dark-blackish-blue);
+    }
+    .kira .text{
+      position: relative;
+      top: -55px;
+      left: 10px;
+      width: 200px;
+    }  
+
+    .attribution { font-size: 11px; text-align: center;
+    position: relative; left: 1%; bottom:20px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="row">
+      <article class="daniel box">
+        <img class="img" src="./images/image-daniel.jpg" alt="">
+        <p class="name">Daniel Clifford</p>
+        <p class="verified">Verified Graduate</p>
+        <h1 class="header">I received a job offer mid-course, and the subjects I learned were current, if not more so,
+        in the company I joined. I honestly feel I got every penny’s worth.</h1>
+        <p class="text"> “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+        transition and have heard some people who had an amazing experience here. I signed up
+        for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
+        The next 12 weeks was the best - and most grueling - time of my life. Since completing
+        the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+      </article>
+      <article class="jonathan box">
+        <img class="img" src="./images/image-jonathan.jpg" alt="">
+        <p class="name">  Jonathan Walters</p>
+        <p class="verified">Verified Graduate</p>
+        <h1 class="header">The team was very supportive and kept me motivated.</h1>
+        <p class="text"> “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I’ve made in myself. ”</p>
+      </article>
+      <article class="jenette box">
+        <img class="img" src="./images/image-jeanette.jpg" alt="">
+        <p class="name">Jeanette Harmon</p>
+        <p class="verified">Verified Graduate</p>
+        <h1 class="header">An overall wonderful and rewarding experience</h1>
+        <p class="text"> “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+          while doing something I love. ”</p>
+      </article>
+      <article class="patrick box">
+        <img class="img" src="./images/image-patrick.jpg" alt="">
+        <p class="name">Patrick Abrams</p>
+        <p class="verified">Verified Graduate</p>
+        <h1 class="header">  Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
+          learning from their experiences was easy.</h1>
+        <p class="text">
+          “ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+          gave me the confidence necessary to be able to go out in the world and present myself as a capable
+          junior developer. The standard is above the rest. You will get the personal attention you need from
+          an incredible community of smart and amazing people. ”</p>
+      </article>
+      <article class="kira box">
+        <img class="img" src="./images/image-kira.jpg" alt="">
+        <p class="name"> Kira Whittle</p>
+        <p class="verified">Verified Graduate</p>
+        <h1 class="header">  Such a life-changing experience. Highly recommended!</h1>
+        <p class="text">
+          “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+          professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+          student of theirs who can only say wonderful things about the program. The entire curriculum and staff
+          did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
+          project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
+          could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
+          experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
+          100% recommend! ”</p>
+      </article>
+    </section>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Mete Han TOPER</a>.
+  </div>
+</body>
+</html>
